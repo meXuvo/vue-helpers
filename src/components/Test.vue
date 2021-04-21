@@ -8,20 +8,27 @@
                 label="first Name"
                 :mandatory-field="true"/>
     </div>
+    <div class="mt-10">
+      <com-toggle-switch v-model="goodPerson" @input="goodPerson" ></com-toggle-switch>
+    </div>
   </div>
 </template>
 <script>
 import ComInput from "./Shared/ComInput";
+import ComToggleSwitch from './Shared/ComToggleSwitch.vue';
 export default {
   name: "test",
   components:{
-    ComInput
+    ComInput,
+    ComToggleSwitch
   },
   data(){
     return{
       firstName:'',
       email:'',
-      number:''
+      number:'',
+      goodPerson:true
+
     }
   }
 }
