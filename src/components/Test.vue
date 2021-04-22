@@ -11,16 +11,21 @@
     <div class="mt-10">
       <com-toggle-switch v-model="goodPerson" @input="goodPerson" ></com-toggle-switch>
     </div>
+    <div class="mt-10 flex justify-center">
+      <delete-confirmation id="10"></delete-confirmation>
+    </div>
   </div>
 </template>
 <script>
+import DeleteConfirmation from './Helpers/DeleteConfirmation.vue';
 import ComInput from "./Shared/ComInput";
 import ComToggleSwitch from './Shared/ComToggleSwitch.vue';
 export default {
   name: "test",
   components:{
     ComInput,
-    ComToggleSwitch
+    ComToggleSwitch,
+    DeleteConfirmation,
   },
   data(){
     return{
